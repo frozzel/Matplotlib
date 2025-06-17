@@ -16,32 +16,33 @@ select dateadd(month, datediff(month, 0, q.CreationDate), 0) m, TagName, count(*
 
 
 ## Data Exploration
-Challenge: Read the .csv file and store it in a Pandas dataframe
+Read the .csv file and store it in a Pandas dataframe
 
 ```python
 load_data(file_path)
 ```
 
-Start coding or generate with AI.
-Challenge: Examine the first 5 rows and the last 5 rows of the of the dataframe
+Examine the first 5 rows and the last 5 rows of the of the dataframe
 
+```python
+head()
+tail()
+```
 
-[ ]
+Check how many rows and how many columns there are. What are the dimensions of the dataframe?
 
-Start coding or generate with AI.
-Challenge: Check how many rows and how many columns there are. What are the dimensions of the dataframe?
+```python
+shape()
+```
 
+Count the number of entries in each column of the dataframe
 
-[ ]
+```python
+shape[0]
+shape[1]
+```
 
-Start coding or generate with AI.
-Challenge: Count the number of entries in each column of the dataframe
-
-
-[ ]
-
-Start coding or generate with AI.
-Challenge: Calculate the total number of post per language. Which Programming language has had the highest total number of posts of all time?
+Calculate the total number of post per language. Which Programming language has had the highest total number of posts of all time?
 
 
 [ ]
