@@ -44,13 +44,13 @@ shape[1]
 
 Calculate the total number of post per language. Which Programming language has had the highest total number of posts of all time?
 
+```python
+groupby('TAG').sum()
+```
 
-[ ]
-
-Start coding or generate with AI.
 Some languages are older (e.g., C) and other languages are newer (e.g., Swift). The dataset starts in September 2008.
 
-Challenge: How many months of data exist per language? Which language had the fewest months with an entry?
+How many months of data exist per language? Which language had the fewest months with an entry?
 
 
 [ ]

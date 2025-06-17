@@ -28,3 +28,9 @@ print(f"Number of rows: {df.shape[0]}, Number of columns: {df.shape[1]}")  # Pri
 
 print(df.count())  # Count the number of non-null entries in each column
 
+print(df.groupby('TAG').sum())  # Group by 'TAG' and count the number of posts for each tag
+
+print(df.groupby("TAG").count())  # Count the number of posts for each tag
+
+df.DATE  = pd.to_datetime(df.DATE)  # Convert 'DATE' column to datetime format
+print(df.DATE)  # Print the earliest date in the 'DATE' column
