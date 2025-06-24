@@ -60,15 +60,6 @@ Data Cleaning
 Let's fix the date format to make it more readable. We need to use Pandas to change format from a string of "2008-07-01 00:00:00" to a datetime object with the format of "2008-07-01"
 
 
-[ ]
-
-Start coding or generate with AI.
-
-[ ]
-
-Start coding or generate with AI.
-
-[ ]
 
 Start coding or generate with AI.
 Data Manipulation
