@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 def load_data(file_path):
     """
@@ -34,3 +36,33 @@ print(df.groupby("TAG").count())  # Count the number of posts for each tag
 
 df.DATE  = pd.to_datetime(df.DATE)  # Convert 'DATE' column to datetime format
 print(df.DATE)  # Print the earliest date in the 'DATE' column
+
+reshaped_df = df.pivot(index='DATE', columns='TAG', values='POSTS')  # Reshape the DataFrame
+print(reshaped_df.head())  # Display the first few rows of the reshaped Data
+
+reshaped_df.count()  # Count the number of non-null entries in each column of the reshaped DataFrame
+print(reshaped_df.shape)  # Print the dimensions of the reshaped DataFrame
+
+reshaped_df.fillna(0, inplace=True) 
+print(reshaped_df.fillna(0))  # Display the first few rows after filling NaN values with 0
+
+print(reshaped_df.isna().values.any())  # Check if there are any NaN values in the reshaped DataFrame
+
+print(plt.plot(reshaped_df.index, reshaped_df.java))  # Plot the reshaped DataFrame
+plt.figure(figsize=(16,10)) # make chart larger
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel('Date', fontsize=14)
+plt.ylabel('Number of Posts', fontsize=14)
+plt.ylim(0, 35000)
+ 
+plt.plot(reshaped_df.index, reshaped_df.java)
+plt.plot(reshaped_df.index, reshaped_df.python) # Tadah!
+
+for column in reshaped_df.columns:
+    plt.plot(reshaped_df.index, reshaped_df[column], 
+             linewidth=3, label=reshaped_df[column].name)
+ 
+plt.legend(fontsize=16) 
+
+plt.show()  # Show the plot
